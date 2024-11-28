@@ -1,0 +1,391 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+h1{ 
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+h2{
+font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+h3{
+    font-family: "Inter", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 200;
+      font-style: normal;
+    }
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+   
+}
+.header {
+    /* background: #d9d9d9; */
+    width: 100%;
+    height: 209px;
+    /* position: absolute; */
+    /* border: red solid 3px; */
+    /* display: block; */
+}
+.header h1{
+    color:white;
+}
+
+#fundo{
+    /* background-color: rgb(242, 242, 242); */
+    background-color: #3c73b7;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+}
+
+
+
+/* menu navbar */
+.navbar {
+    
+    height: 80px; /* Define a altura da barra */
+    width: 1300px;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    z-index: 300;
+    position: absolute;
+    top: 50px;
+    left: 200px;
+}
+/*  */
+.navbar img{
+    height: auto;
+    width: 65px;
+
+}
+
+.logo {
+    padding-left: 80px; /* Adiciona padding no lado esquerdo da logo */
+}
+.logo img {
+    width: 60px; /* Ajusta o tamanho da logo */
+    height: auto; /* Mantém a proporção da imagem */
+
+}
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0 0 0 20px; 
+    margin-right: auto; /* Empurra os links de navegação para a esquerda */
+    z-index: 300;
+    
+}
+.navbar ul li {
+    margin-left: 20px;
+}
+.navbar ul li a {
+    color: #F2F2F2; /* Ajuste a cor dos links */
+    text-decoration: none;
+    font-size: 18px; /* Tamanho da fonte dos links */
+}
+.navbar ul li a:hover {
+    color: #FFD700; /* Altere para uma cor diferente ao passar o mouse (hover) */
+}
+/*  */
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main{
+    margin-top: 200px;
+    margin-bottom: 300px;
+    position: relative;
+    z-index: 0;
+    height: 500px;
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.form-layout {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.input-column {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaço entre os grupos de inputs */
+}
+.input-column > div:first-of-type{
+
+    /* justify-content: initial; */
+    height: 380px;
+}
+
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    width: 950px;
+    justify-content: space-around;
+    /* border: solid 2px red; */
+    
+}
+.input-group h2{
+
+    padding: 10px;
+    margin: 0px 0px 5px 0px;
+
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 55%; /* 70% da altura do grupo */
+}
+
+textarea{
+
+    width: 95%;
+    /* height: 100px; */
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 60%; /* 70% da altura do grupo*/
+    overflow: auto;
+    resize: none;
+}
+#campo0{
+    width: 95%;
+    height: 90px;
+}
+#feedback0{
+    
+    margin: 116px 0px 55px 0px;
+    height: 200px;
+
+}
+
+.div_botoes{
+    height: 15%;
+    display: flex;
+    padding: 20px;
+   
+    margin: 0px 25px 0px 0px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.btn_square{
+    padding: 5px;
+    font-size: 16px;
+    background-color: #005D9E;
+    /* color: white; */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    height: 40px; /* 20% da altura do grupo */
+    width: 9%;
+    margin-left: 18px;
+}
+
+.btn_revisar{
+    padding: 5px;
+    font-size: 16px;
+    background-color: #005D9E;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 18px;
+
+    height: 40px; /* 20% da altura do grupo */
+    width: 17%;
+}
+button img{
+    width: 20px;
+    height: 20px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#imgpoligono{
+
+    transform: rotate(-6deg); /* Equal to rotateZ(45deg) */
+
+    left: 1150px;
+    bottom: 100px;
+    position: relative;
+    width: 150px;
+}
+
+#circulo {
+    background:  #4C57B7;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position:relative;
+    left: 1048px;
+    top: 120px;
+
+   
+}
+/*DIV MEIO CARDS CSS*/
+
+.main {
+    padding: 40px;
+    text-align: center;
+}
+
+.search-bar {
+    position: relative;
+    width: 60%;
+    margin: 20px auto; /* Centraliza a barra de pesquisa */
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 12px 12px 12px 50px; /* Adiciona espaço à esquerda para o ícone */
+    font-size: 18px;
+    border: 2px solid #5f92cf; /* Esta é a linha que define a cor da borda */
+    border-radius: 60px;
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
+}
+.search-bar input::placeholder {
+    color:  #3c73b7; /* Substitua #888888 pela cor desejada */
+    opacity: 1; /* Garante que a opacidade seja total */
+}
+
+
+.search-bar img {
+    position: absolute;
+    top: 50%;
+    left: 15px; /* Posição horizontal do ícone dentro da caixa */
+    transform: translateY(-50%);
+    width: 24px; /* Ajuste o tamanho do ícone conforme necessário */
+    height: 24px;
+    pointer-events: none; /* Permite clicar no input mesmo sobre o ícone */
+}
+
+#maincard{
+
+    margin-top:60px;
+}
+
+.cards-container {
+    width: 60%; /* Define a mesma largura da barra de pesquisa */
+    margin: 0 auto; /* Centraliza o contêiner dos cards */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content:flex-start; /* Alinha os cards à esquerda */
+}
+
+
+.card {
+    background-color: #5a72ea;
+    color: white;
+    width: calc(28%); /* Dois cards por linha */
+    height: 150px;
+    margin: 20px;
+    border-radius: 10px;
+
+    font-size: 14px;
+    padding: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 20;
+    
+}
+
+.card:hover {
+    background-color: #3c51d5;
+}
+
+.delete-icon {
+    position: relative;
+    top: -15px;
+    right: -185px;
+    font-size: 1.7em;
+    color: #ff0000;
+    cursor: pointer;
+    display: none;
+    z-index: 30;
+}
+.card:hover .delete-icon {
+    display: inline-block;  /* Mostra o ícone apenas ao passar o mouse */
+}
+
+/* FIM  */
+
+footer{
+
+    width: 100%;
+    height: 200px;
+    background-color: #3c73b7;
+    box-shadow: -4px -15px 15px -6px rgba(0, 0, 0, 0.227);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    position:relative;
+    z-index: 10;
+   
+}
+footer h3{
+    /* text-align: center; */
+    color: white;
+    font-size: 23px;
+}
+
+footer p{
+
+    margin: 5px;
+    /* text-align: center; */
+    color: white;
+    font-size: 17px;
+}
+
+.fixed{
+
+    position: fixed;
+}
+
+
