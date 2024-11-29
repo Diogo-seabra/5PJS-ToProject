@@ -65,14 +65,16 @@ h3{
     padding: 0px;
     display: flex;
     flex-direction: row;
+    margin-top: 50px;
 
     justify-content: space-around;
     align-items: center;
     color: white;
     z-index: 300;
-    position: absolute;
-    top: 50px;
-    left: 200px;
+    /* position: absolute;
+    top: 50px; */
+    /* left: 200px; */
+    
 }
 /*  */
 .navbar img{
