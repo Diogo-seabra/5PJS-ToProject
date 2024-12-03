@@ -1,5 +1,10 @@
 
-function carregaPropostas(){
+function CriaProjeto(){
+
+
+}
+
+function carregaProjeto(){
 
 
 }

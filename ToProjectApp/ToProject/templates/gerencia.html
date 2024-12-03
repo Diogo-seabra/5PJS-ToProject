@@ -29,8 +29,6 @@
            <!-- Inclui o header -->
             {% include "./navbar/nav.html" %}
 
-
-
         </header>
 
         <div class="container">
@@ -44,7 +42,34 @@
 
                 <div id="maincard" class="cards-container">
 
-                    {% for proposta in  propostas %}
+                    <div class="projeto">
+                            <div class="nomeProjeto">
+                                <p class="nome">
+                                    Nome Projeto
+                                </p>
+                            </div>
+
+                            <div class="info">
+                                <p class="dias">
+                                    Teste 25 dias
+                                </p>
+                                <p class="porcentagem">
+                                    15%
+                                </p>
+                                <div class="barraStatus">
+
+                                </div>
+                            </div>
+
+                    </div>
+
+                    <div id="novoProjeto" onclick="CriaProjeto()">
+                        <p>Novo Projeto</p>
+                        <img src="{% static 'images/adicionar.png' %}">
+
+                    </div>
+
+                    <!-- {% for proposta in  propostas %}
                         <div id="card-{{ proposta.Id }}"class="card" onclick="selecionaProposta({{proposta.Id}})">
                             <span class="delete-icon" onclick="confirmDelete({{ proposta.Id }})">&times;</span>
                             <p>{{ proposta.Nome }}</p>
@@ -52,7 +77,7 @@
                     {% empty %}
                         <h3>Nenhum registro encontrado.</h3>
 
-                    {% endfor %}
+                    {% endfor %} -->
                 
                 </div>
 

@@ -310,6 +310,79 @@ button:hover {
     margin-top:60px;
 }
 
+
+.projeto{
+    background-color: #5a72ea;
+    color: white;
+    width: calc(28%); /* Dois cards por linha */
+    height: 150px;
+    margin: 20px;
+    border-radius: 10px;
+
+    font-size: 14px;
+    padding: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+
+}
+.nomeProjeto{
+    /* background-color: #ccc; */
+    /* border: solid 2px red; */
+    /* padding: 5px; */
+    margin: 0 0 14px 0;
+    height: 2rem;
+    width: 90%;
+
+    
+}
+.nomeProjeto p{
+    font-size:  18px;
+}
+
+.dias,.porcentagem,.barraStatus{
+
+    margin: 0 0 10px 0;
+}
+
+.barraStatus{
+    height: 8px;
+    width: 95%;
+    background-color: #FFD700;
+}
+
+#novoProjeto{
+    background-color: #f0f1f875;
+    color: rgb(255, 255, 255);
+    width: calc(28%); /* Dois cards por linha */
+    height: 150px;
+    margin: 20px;
+    border-radius: 10px;
+
+    font-size: 14px;
+    padding: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-between;
+}
+#novoProjeto p{
+    color:  #3c73b7;
+}
+
+#novoProjeto img{
+
+    padding:5px;
+    width: 6em; /* Ajuste o tamanho do ícone conforme necessário */
+    /* height: 24px; */
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
 .cards-container {
     width: 60%; /* Define a mesma largura da barra de pesquisa */
     margin: 0 auto; /* Centraliza o contêiner dos cards */
