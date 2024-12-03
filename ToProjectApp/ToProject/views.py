@@ -7,8 +7,17 @@ import json
 import importlib.util
 from .forms import CriarProjetoForm
 from django.views.generic import ListView, DetailView, UpdateView
-from .models import Projeto
+from .models import Projeto, Tarefa
+from django.forms import inlineformset_factory
 # Create your views here.
+
+TarefaFormSet = inlineformset_factory(
+    Projeto,  # Modelo pai
+    Tarefa,   # Modelo relacionado
+    fields=['nome', 'status', 'prioridade', 'responsavel'],  # Campos do formulário de Tarefa
+    extra=1,  # Quantidade de formulários vazios adicionais para novas tarefas
+    can_delete=True  # Permitir exclusão de tarefas existentes
+)
 
 class Home(ListView):
     template_name = "gerencia.html"
@@ -32,12 +41,27 @@ class Editar_projeto(UpdateView):
     model = Projeto
     fields = ['nome', 'dataInicio', 'dataFinal', 'descricao', 'responsavel', 'cor', 'tag', 'status_projeto', 'cliente']
 
-    def test_func(self):
-        user = self.get_object()
-        return self.request.user == user
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        if self.request.POST:
+            context['formset'] = TarefaFormSet(self.request.POST, instance=self.object)
+        else:
+            context['formset'] = TarefaFormSet(instance=self.object)
+        return context
+
+    def form_valid(self, form):
+        context = self.get_context_data()
+        formset = context['formset']
+        if formset.is_valid():
+            self.object = form.save()
+            formset.instance = self.object
+            formset.save()
+            return super().form_valid(form)
+        else:
+            return self.form_invalid(form)
 
     def get_success_url(self):
-        return reverse('Home')
+        return reverse('ver_projeto', kwargs={'pk': self.object.pk})
 
 
 class Ver_projeto(DetailView):

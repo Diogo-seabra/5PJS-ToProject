@@ -41,8 +41,9 @@
         {{object.tag}} 
         {{object.status_projeto}} 
         {{object.cliente}}
-        {{object.tarefas}} 
+        
      -->
+        {{object.tarefas}} 
         <p>Deseja editar seu projeto?</p>
         <button class="btn btn-primary" style="background-color: #3c73b7;" onclick="window.location.href='{% url "editar_projeto" object.pk %}'">Clique aqui</button>
 
