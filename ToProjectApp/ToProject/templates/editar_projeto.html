@@ -24,12 +24,21 @@
         {% include "./navbar/nav.html" %}
     </header>
 
-    <h1>Criar Novo Projeto</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ form|crispy }}
-        <button type="submit">Criar Projeto</button>
-    </form>
+    <div class="container">
+        <h1>Editar Projeto {{object.nome}}</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <h2>Tarefas</h2>
+            {{ formset.management_form }}
+            {% for form in formset %}
+                <div class="form-row">
+                    {{ form|crispy }}
+                </div>
+            {% endfor %}
+            <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+        </form>
+    </div>
 
     <footer>
         <h3>To Project 2024</h3>

@@ -40,9 +40,11 @@
                     {% for projeto in object_list %}
                     <div class="projeto">
                             <div class="nomeProjeto">
+                                <a href="{% url 'ver_projeto' projeto.pk %}">
                                 <p class="nome">
                                     {{projeto.nome}}
                                 </p>
+                                </a>
                             </div>
 
                             <div class="info">

@@ -23,14 +23,32 @@
        <!-- Inclui o header -->
         {% include "./navbar/nav.html" %}
     </header>
+    <div class="project-details">
+        <h2>{{ object.nome }}</h2>  <div class="project-info">
+          <p class="info-label">Data de Início:</p>
+          <p class="info-value">{{ object.dataInicio }}</p>
+    
+          <p class="info-label">Data Final:</p>
+          <p class="info-value">{{ object.dataFinal }}</p>
+          </div>
+    
+        <p>Descrição:</p>
+        <p class="project-description">{{ object.descricao }}</p>
 
-    <h1>Criar Novo Projeto</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ form|crispy }}
-        <button type="submit">Criar Projeto</button>
-    </form>
+        <!-- ainda falta criar um estilo para esses atributos: -->
+        <!-- {{object.responsavel}} 
+        {{object.cor}} 
+        {{object.tag}} 
+        {{object.status_projeto}} 
+        {{object.cliente}}
+        {{object.tarefas}} 
+     -->
+        <p>Deseja editar seu projeto?</p>
+        <button class="btn btn-primary" style="background-color: #3c73b7;" onclick="window.location.href='{% url "editar_projeto" object.pk %}'">Clique aqui</button>
 
+
+      </div>
+   
     <footer>
         <h3>To Project 2024</h3>
         <p>Gerenciando o seu projeto.<p>

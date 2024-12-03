@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 from django.http import HttpResponse
 from pathlib import Path
 from django.http import JsonResponse
@@ -6,7 +6,7 @@ from django.views.decorators.csrf import csrf_exempt, csrf_protect
 import json
 import importlib.util
 from .forms import CriarProjetoForm
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView, UpdateView
 from .models import Projeto
 # Create your views here.
 
@@ -26,3 +26,20 @@ def criar_projeto(request):
         form = CriarProjetoForm()
     
     return render(request, 'criar_projeto.html', {'form': form})
+
+class Editar_projeto(UpdateView):
+    template_name = "editar_projeto.html"
+    model = Projeto
+    fields = ['nome', 'dataInicio', 'dataFinal', 'descricao', 'responsavel', 'cor', 'tag', 'status_projeto', 'cliente']
+
+    def test_func(self):
+        user = self.get_object()
+        return self.request.user == user
+
+    def get_success_url(self):
+        return reverse('Home')
+
+
+class Ver_projeto(DetailView):
+    template_name = "ver_projeto.html"
+    model = Projeto

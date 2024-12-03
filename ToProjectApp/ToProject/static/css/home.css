@@ -463,4 +463,42 @@ footer p{
     position: fixed;
 }
 
+/* Minhas edições:  */
 
+a {
+    color: #F2F2F2; /* Ajuste a cor dos links */
+    text-decoration: none;
+    font-size: 18px; /* Tamanho da fonte dos links */
+}
+a:hover {
+    color: #FFD700; /* Altere para uma cor diferente ao passar o mouse (hover) */
+}
+
+/* project_detail.css */
+
+.project-details {
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .project-info {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  
+  .info-label {
+    font-weight: bold;
+    width: 120px;
+    margin-right: 5px;
+  }
+  
+  .info-value {
+    flex: 1;
+  }
+  
+  .project-description {
+    margin-bottom: 15px;
+  }

@@ -1,5 +1,5 @@
 from django import forms
-from .models import Projeto
+from .models import Projeto, Tarefa
 
 
 class CriarProjetoForm(forms.ModelForm):
@@ -18,9 +18,15 @@ class CriarProjetoForm(forms.ModelForm):
             'status_projeto': 'Status do Projeto',
             'cliente': 'Cliente Associado',
         }
-        
+
         widgets = {
             'dataInicio': forms.DateInput(attrs={'type': 'date'}),
             'dataFinal': forms.DateInput(attrs={'type': 'date'}),
             'descricao': forms.Textarea(attrs={'rows': 5}),
         }
+
+
+class TarefaForm(forms.ModelForm):
+    class Meta:
+        model = Tarefa
+        fields = ['nome', 'status', 'prioridade', 'responsavel']
