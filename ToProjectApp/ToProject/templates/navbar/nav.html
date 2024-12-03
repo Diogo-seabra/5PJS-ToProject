@@ -2,17 +2,12 @@
 {% load static %}
 
 <div class="navbar container">
-    {% comment %} <div class="logo"> </div>   {% endcomment %}
-    
-    {% comment %} <img src="{% static 'images/logo_branca.png' %}" alt="Logo">        {% endcomment %}
 
     <h1>ToProject<h1>
 
     <ul>
-        <li><a href="./">Home<a/></li>
+        <li><a href="{% url 'Home' %}">Home</a></li>
         <li><a href="/verificador">Editar</a></li>
-        {% comment %} <li><a href="#">Load</a></li> {% endcomment %}
-        {% comment %} <li><a href="#">Export</a></li> {% endcomment %}
         <li><a href="" target="_blank">Logout</a></li>
     </ul>
 </div> 

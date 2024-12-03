@@ -11,8 +11,8 @@ LISTA_COR = [
 ]
 
 LISTA_STATUS = [
-    ("NAO_CONCLUIDO", "Em producao"),
-    ("CONCLUIDO", "Concluido")
+    ("NAO_CONCLUIDO", "Em produção"),
+    ("CONCLUIDO", "Concluído")
 ]
 
 LISTA_PRIORIDADE = [

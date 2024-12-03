@@ -21,10 +21,6 @@
         <header class="header"> 
 
             <div id="fundo"></div>
-            {% comment %} <img src="{% static 'images/headermenor.png' %}" alt="header em azul e roxo"> {% endcomment %}
-            
-            {% comment %} <img src="{% static 'images/barra.png' %}" alt="header em azul e roxo">
-            <img id="logo" src="{% static 'images/logo_header.png' %}" alt="logo em branco" >  {% endcomment %}
 
            <!-- Inclui o header -->
             {% include "./navbar/nav.html" %}
@@ -41,11 +37,11 @@
                 </div>  
 
                 <div id="maincard" class="cards-container">
-
+                    {% for projeto in object_list %}
                     <div class="projeto">
                             <div class="nomeProjeto">
                                 <p class="nome">
-                                    Nome Projeto
+                                    {{projeto.nome}}
                                 </p>
                             </div>
 
@@ -62,11 +58,12 @@
                             </div>
 
                     </div>
-
-                    <div id="novoProjeto" onclick="CriaProjeto()">
+                    {% endfor %}
+                    <div id="novoProjeto">
                         <p>Novo Projeto</p>
+                        <a href="{% url 'criar_projeto' %}">
                         <img src="{% static 'images/adicionar.png' %}">
-
+                        </a>
                     </div>
 
                     <!-- {% for proposta in  propostas %}
